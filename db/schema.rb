@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141106202923) do
 
-  create_table "actors", force: true do |t|
+  create_table "actors", force: :cascade do |t|
     t.string   "dob"
     t.string   "name"
     t.text     "bio"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20141106202923) do
     t.datetime "updated_at"
   end
 
-  create_table "directors", force: true do |t|
+  create_table "directors", force: :cascade do |t|
     t.string   "dob"
     t.string   "name"
     t.text     "bio"
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20141106202923) do
     t.datetime "updated_at"
   end
 
-  create_table "movies", force: true do |t|
+  create_table "movies", force: :cascade do |t|
     t.string   "title"
     t.string   "year"
     t.integer  "duration"
@@ -42,7 +42,7 @@ ActiveRecord::Schema.define(version: 20141106202923) do
     t.datetime "updated_at"
   end
 
-  create_table "roles", force: true do |t|
+  create_table "roles", force: :cascade do |t|
     t.string   "character_name"
     t.integer  "movie_id"
     t.integer  "actor_id"
